@@ -3,6 +3,7 @@ site="http://$1"
 
 wget \
      -P $domain \
+     -t 2 \
      --recursive \
      --no-clobber \
      --page-requisites \
