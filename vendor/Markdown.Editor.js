@@ -26,7 +26,7 @@
 
         link: "Hyperlink <a> Ctrl+L",
         linkdescription: "enter link description here",
-        linkdialog: "<p><b>Insert Hyperlink</b></p><p>http://example.com/ \"optional title\"</p>",
+        linkdialog: "<p><b>Insert Hyperlink</b></p><p>https://example.com/ \"optional title\"</p>",
 
         quote: "Blockquote <blockquote> Ctrl+Q",
         quoteexample: "Blockquote",
@@ -36,7 +36,7 @@
 
         image: "Image <img> Ctrl+G",
         imagedescription: "enter image description here",
-        imagedialog: "<p><b>Insert Image</b></p><p>http://example.com/images/diagram.jpg \"optional title\"<br><br>Need <a href='http://www.google.com/search?q=free+image+hosting' target='_blank'>free image hosting?</a></p>",
+        imagedialog: "<p><b>Insert Image</b></p><p>https://example.com/images/diagram.jpg \"optional title\"<br><br>Need <a href='https://www.google.com/search?q=free+image+hosting' target='_blank'>free image hosting?</a></p>",
 
         olist: "Numbered List <ol> Ctrl+O",
         ulist: "Bulleted List <ul> Ctrl+U",
@@ -64,8 +64,8 @@
 
     // The default text that appears in the dialog input box when entering
     // links.
-    var imageDefaultText = "http://";
-    var linkDefaultText = "http://";
+    var imageDefaultText = "https://";
+    var linkDefaultText = "https://";
 
     // -------------------------------------------------------------------
     //  END OF YOUR CHANGES
@@ -232,7 +232,7 @@
         var regexText;
         var replacementText;
 
-        // chrome bug ... documented at: http://meta.stackexchange.com/questions/63307/blockquote-glitch-in-editor-in-chrome-6-and-7/65985#65985
+        // chrome bug ... documented at: https://meta.stackexchange.com/questions/63307/blockquote-glitch-in-editor-in-chrome-6-and-7/65985#65985
         if (navigator.userAgent.match(/Chrome/)) {
             "X".match(/()./);
         }
@@ -1099,7 +1099,7 @@
                 // Fixes common pasting errors.
                 text = text.replace(/^http:\/\/(https?|ftp):\/\//, '$1://');
                 if (!/^(?:https?|ftp):\/\//.test(text))
-                    text = 'http://' + text;
+                    text = 'https://' + text;
             }
 
             dialog.parentNode.removeChild(dialog);
@@ -1901,7 +1901,7 @@
         //
         // Since this is essentially a backwards-moving regex, it's susceptible to
         // catstrophic backtracking and can cause the browser to hang;
-        // see e.g. http://meta.stackexchange.com/questions/9807.
+        // see e.g. https://meta.stackexchange.com/questions/9807.
         //
         // Hence we replaced this by a simple state machine that just goes through the
         // lines and checks for a), b), and c).

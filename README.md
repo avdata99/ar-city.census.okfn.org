@@ -16,5 +16,10 @@ wget \
      --convert-links \
      --restrict-file-names=windows \
      --domains ar-city.census.okfn.org \
-     --no-parent https://ar-city.census.okfn.org
+     --no-parent http://ar-city.census.okfn.org
 ```
+
+## Manual changes required
+
+Changes:
+ - Avoid _Mixed Content_ errors changing `http` to `https`.

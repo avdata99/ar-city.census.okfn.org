@@ -1,7 +1,7 @@
 $(document).ready(function($) {
 
   // Only one popover visible
-  // Adapted from http://stackoverflow.com/a/12119747/114462
+  // Adapted from https://stackoverflow.com/a/12119747/114462
   var $visiblePopover;
 
   $('body').on('click', 'td.showpopover', function() {
